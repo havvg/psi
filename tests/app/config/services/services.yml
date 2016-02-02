@@ -1,0 +1,5 @@
+services:
+    demo_command:
+        class: Psi\Test\App\Command\DemoCommand
+        tags:
+            - { name: 'console.command' }

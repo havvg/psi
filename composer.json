@@ -1,0 +1,34 @@
+{
+    "name": "havvg/psi",
+    "description": "A miro CLI framework.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Toni Uebernickel",
+            "email": "tuebernickel@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": { "Psi\\": "src/Psi" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Psi\\": "tests/Psi",
+            "Psi\\Test\\App\\": "tests/app/src"
+        }
+    },
+
+    "require": {
+        "php": ">=5.6",
+        "symfony/config": "^3.0",
+        "symfony/console": "^3.0",
+        "symfony/dependency-injection": "^3.0",
+        "symfony/event-dispatcher": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2.3",
+        "mockery/mockery": "^0.9.4"
+    }
+}

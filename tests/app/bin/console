@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+set_time_limit(0);
+
+use Psi\Application;
+use Psi\Test\App\PsiTestKernel;
+
+require_once __DIR__.'/../../../vendor/autoload.php';
+
+$kernel = new PsiTestKernel('test', true);
+
+$application = new Application($kernel);
+$application->run();
