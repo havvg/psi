@@ -14,7 +14,9 @@ abstract class AbstractPlugin implements PluginInterface
      */
     public function build(ContainerBuilder $container)
     {
-        $container->registerExtension($this->getContainerExtension());
+        if ($extension = $this->getContainerExtension()) {
+            $container->registerExtension($extension);
+        }
 
         foreach ($this->getCompilerPasses() as $pass) {
             $container->addCompilerPass($pass);
@@ -35,7 +37,6 @@ abstract class AbstractPlugin implements PluginInterface
      */
     protected function getContainerExtension()
     {
-        return [];
     }
 
     /**
